@@ -10,9 +10,9 @@ Aplicar diversas variantes del algoritmo de regresión en la solución de proble
 (-B-) Estimar la puntuación de la calidad de un vino.
 
 ## Bases de datos (véase archivos anexos)
-https://archive.ics.uci.edu/ml/datasets/wine+quality
-https://www.kaggle.com/mirichoi0218/insurance
-https://github.com/stedy/Machine-Learning-with-R-datasets/blob/master/insurance.csv
+* https://archive.ics.uci.edu/ml/datasets/wine+quality
+* https://www.kaggle.com/mirichoi0218/insurance
+* https://github.com/stedy/Machine-Learning-with-R-datasets/blob/master/insurance.csv
 
 ## Actividades a desarrollar
 1. En clase se estudió el algoritmo "Batch Gradient Descent". Investigar acerca de las siguientes variantes del algoritmo: (a) Stochastic Gradient Descent y (b) Mini-batch Gradient Descent. ¿Cuáles son las diferencias y las ventajas/desventajas entre estas variantes? ¿cuáles son las condiciones bajo las cuales se prefieren aplicar estas variantes?
