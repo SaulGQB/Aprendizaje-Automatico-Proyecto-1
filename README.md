@@ -6,8 +6,8 @@ Este proyecto se realiza en equipos.
 Aplicar diversas variantes del algoritmo de regresión en la solución de problemas de aprendizaje automático.
 
 ## Problemas a solucionar
-(-A-) Estimar el costo de un seguro.
-(-B-) Estimar la puntuación de la calidad de un vino.
+* (-A-) Estimar el costo de un seguro.
+* (-B-) Estimar la puntuación de la calidad de un vino.
 
 ## Bases de datos (véase archivos anexos)
 * https://archive.ics.uci.edu/ml/datasets/wine+quality
@@ -25,5 +25,5 @@ Aplicar diversas variantes del algoritmo de regresión en la solución de proble
 8. Elaborar una video-entrega (todos los integrantes del equipo deberán participar). Como parte de la evaluación se consideran el dominio, la comprensión y la profundidad plasmadas en las explicaciones. Debe presentarse la información de los incisos 1-6.
 
 Revisar en la presentación del primer día de clases:
-Los requisitos para la "Entrega en plataforma digital".
-Los criterios de evaluación de (a) la "Entrega virtual" y (b) el "Reporte digital".
+* Los requisitos para la "Entrega en plataforma digital".
+* Los criterios de evaluación de (a) la "Entrega virtual" y (b) el "Reporte digital".
