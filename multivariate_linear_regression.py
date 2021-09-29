@@ -4,7 +4,7 @@ def batch_gradient_descent(X, Y, eta, epochs, percent):
     X: DataFrame de instancias o features
     Y: DataFrame de targets
     eta: tasa de aprendizaje (learning rate)
-    epocs: numero máximo de iteraciones
+    epochs: numero máximo de iteraciones
     percent: % de datos que seran utilizados para el test (base 100)
     
     ------------------------------------
@@ -103,3 +103,5 @@ def normal_equation(X, Y, percent):
     Y_predict = X_b_test @ theta
     
     return indices_test, indices_train, theta, Y_predict, Y_test
+
+
