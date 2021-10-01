@@ -19,7 +19,7 @@ def batch_gradient_descent(X, Y, eta, epochs, percent):
     '''
     import numpy as np
     import pandas as pd
-    import random as random
+    import random
     
     m = len(X)
     test_index = list(pd.Series(random.sample(list(np.arange(0, m)), round(m * percent / 100))).sort_values())
@@ -79,7 +79,7 @@ def normal_equation(X, Y, percent):
     
     m = len(X)
     indices_test = list(pd.Series(random.sample(list(np.arange(0, m)), round(m * percent / 100))).sort_values())
-    indices_train = list(np.arange(0, m))
+    indices_train = list(np.arange(0, m)) 
     
     for indice in indices_test:
         indices_train.remove(indice)
@@ -102,6 +102,4 @@ def normal_equation(X, Y, percent):
     X_b_test = np.c_[np.ones((m, 1)), X_test]
     Y_predict = X_b_test @ theta
     
-    return indices_test, indices_train, theta, Y_predict, Y_test
-
-
+    return indices_test, indices_train, theta, Y_predict
