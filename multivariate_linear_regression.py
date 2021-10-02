@@ -61,15 +61,15 @@ def batch_gradient_descent(X, Y, eta, epochs, percent):
 
 def normal_equation(X, Y, percent):
     '''Esta función sirve para utilizar el método de regresión lineal con ecuación normal
-    normal_equation(X, Y): 
+    normal_equation(X, Y, percent): 
     X: Matriz columna de inputs 
     Y: Matriz columna de outputs
     percent: % de datos que seran utilizados para el test (base 100)
     
-    Return: indices_test, indices_train, theta, Y_predict
+    Return: theta, test_index, train_index, Y_predict
     
-    indices_test: indices de los valores utilizados para el test
-    indices_train: indices de los valores utilizados para el entrenamiento
+    test_index: indices de los valores utilizados para el test
+    train_index: indices de los valores utilizados para el entrenamiento
     theta: valores correspondientes a theta_n
     Y_predict: valores de Y obtenidos de la predicción
     '''
@@ -78,16 +78,16 @@ def normal_equation(X, Y, percent):
     import random as random
     
     m = len(X)
-    indices_test = list(pd.Series(random.sample(list(np.arange(0, m)), round(m * percent / 100))).sort_values())
-    indices_train = list(np.arange(0, m)) 
+    test_index = list(pd.Series(random.sample(list(np.arange(0, m)), round(m * percent / 100))).sort_values())
+    train_index = list(np.arange(0, m)) 
     
-    for indice in indices_test:
-        indices_train.remove(indice)
+    for indice in test_index:
+        train_index.remove(indice)
 
-    X_train = np.c_[X.iloc[indices_train]]
-    X_test = np.c_[X.iloc[indices_test]]
-    Y_train = np.c_[Y.iloc[indices_train]]
-    Y_test = np.c_[Y.iloc[indices_test]]
+    X_train = np.c_[X.iloc[train_index]]
+    X_test = np.c_[X.iloc[test_index]]
+    Y_train = np.c_[Y.iloc[train_index]]
+    Y_test = np.c_[Y.iloc[test_index]]
     
     # Entrenamiento
     m = len(X_train)
@@ -102,4 +102,4 @@ def normal_equation(X, Y, percent):
     X_b_test = np.c_[np.ones((m, 1)), X_test]
     Y_predict = X_b_test @ theta
     
-    return indices_test, indices_train, theta, Y_predict
+    return theta, test_index, train_index, Y_predict
