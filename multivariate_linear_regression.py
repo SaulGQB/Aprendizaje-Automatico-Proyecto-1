@@ -29,8 +29,8 @@ def batch_gradient_descent(X, Y, eta, epochs, percent):
         train_index.remove(element)
         
     
-    X_train = np.c_[X.iloc[train_index]]
-    X_test = np.c_[X.iloc[test_index]]
+    X_train = X.iloc[train_index]
+    X_test = X.iloc[test_index]
     Y_train = np.c_[Y.iloc[train_index]]
     Y_test = np.c_[Y.iloc[test_index]]
     
