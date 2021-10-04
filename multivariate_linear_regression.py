@@ -62,8 +62,8 @@ def batch_gradient_descent(X, Y, eta, epochs, percent):
 def normal_equation(X, Y, percent):
     '''Esta función sirve para utilizar el método de regresión lineal con ecuación normal
     normal_equation(X, Y, percent): 
-    X: Matriz columna de inputs 
-    Y: Matriz columna de outputs
+    X: Dataframe de inputs 
+    Y: Dataframe de outputs
     percent: % de datos que seran utilizados para el test (base 100)
     
     Return: theta, test_index, train_index, Y_predict
